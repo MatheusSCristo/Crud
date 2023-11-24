@@ -3,7 +3,7 @@ import * as S from "./styleSales"
 import { auth, database } from '../../../../firebase/firebase'
 import { get, push, ref, update } from 'firebase/database'
 
-const AddStock = ({ setSalesActive, setSelected, setQuantityError }) => {
+const addSales = ({ setSalesActive,setSelected }) => {
     const [sold, setSold] = useState(1)
     const [brand, setBrand] = useState("")
     const [name, setName] = useState("")
@@ -31,12 +31,16 @@ const AddStock = ({ setSalesActive, setSelected, setQuantityError }) => {
                         }
                         return Promise.resolve()
                     }
+                    else {
+                        alert("You can't sell what you don't have in stock")
+                        return Promise.reject(new Error("Missing Stock"))
+                    }
 
                 }))
 
             }
             else {
-                alert("You can't sell what you dont have in stock")
+                alert("You can't sell what you don't have in stock")
                 return Promise.reject(new Error("Missing Stock"))
             }
         })
@@ -93,4 +97,4 @@ const AddStock = ({ setSalesActive, setSelected, setQuantityError }) => {
     )
 
 }
-export default AddStock
+export default addSales

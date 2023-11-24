@@ -64,7 +64,7 @@ const Register = () => {
           onChange={((e) => setPassword(e.target.value))}></S.Input>
         <S.LoginButtons>
           <S.Button typeof='submit' onClick={(e) => HandleonClickRegister(e)}>Register</S.Button>
-          <S.LoginH2 >Already have an account?</S.LoginH2>
+          <S.LoginH2 onClick={()=>navigate("/login")} >Already have an account?</S.LoginH2>
         </S.LoginButtons>
       </S.form>
     </S.Wrapper>

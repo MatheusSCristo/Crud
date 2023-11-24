@@ -40,7 +40,7 @@ const Boxes = ({selected,search}) => {
                 <S.h2>Brand:{entry[1].brand}</S.h2>
                 {selected === "stock" && <S.h3>In Stock:{entry[1].quantity}</S.h3>}
                 <S.h3>Sold:{entry[1].sold}</S.h3>
-                <S.Trash src={"/delete.svg"} onClick={()=>handleRemove(entry[0])}/>
+                <S.Trash src={"./delete.svg"} onClick={()=>handleRemove(entry[0])}/>
             </S.Product>)}
         })
     )

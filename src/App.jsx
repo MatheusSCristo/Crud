@@ -4,10 +4,11 @@ import {Outlet} from "react-router-dom"
 
 
 
-const App = () => {
+const App = ({ children }) => {
   return (
-    
-    <Outlet/>
+    <>
+    {children}
+    </>
   )
 }
 

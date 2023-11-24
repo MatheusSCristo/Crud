@@ -3,7 +3,7 @@ import * as S from "./styleStock"
 import { push, ref } from 'firebase/database';
 import { auth, database } from '../../../../firebase/firebase';
 
-const AddStock = ({ setStockActive }) => {
+const AddStock = ({ setStockActive,setSelected }) => {
   const [quantity,setQuantity]=useState(1)
   const [brand,setBrand]=useState("")
   const [name,setName]=useState("")
@@ -22,7 +22,8 @@ const AddStock = ({ setStockActive }) => {
     setBrand("")
     setName("")
     setQuantity(1)
-    setSelected("stock")}
+    setSelected("stock")
+  }
     else{
       alert("You need to fill all the necessary fields")
     }

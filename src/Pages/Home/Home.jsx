@@ -53,7 +53,7 @@ const Home = () => {
       </S.Container>
       <S.Container>
         <S.Input type='text' placeholder='Search a product' value={search} onChange={(e)=>setSearch(e.target.value)}></S.Input>
-        <S.SearchImg src='/search.svg'/>
+        <S.SearchImg src='./search.svg'/>
       </S.Container>
       <S.ContainerSelect>
         <S.SelectButton color={selected === "stock" ? "#2BB708" : '#84F169'} onClick={() => setSelected("stock")}>Stock</S.SelectButton>

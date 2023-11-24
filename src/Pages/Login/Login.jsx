@@ -18,7 +18,7 @@ const Login = () => {
         return signInWithEmailAndPassword(auth, email, password);
       })
       .then(() => {
-        navigate("/");
+        navigate("/Crud");
       })
       .catch((error) => {
         const errorCode = error.code;

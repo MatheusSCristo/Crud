@@ -78,7 +78,7 @@ export const LogoutButton=styled.button`
     position:absolute;
     right:0;
     margin:15px;
-    background-image:url("/logout.svg");
+    background-image:url("./logout.svg");
     background-size:contain;
     cursor: pointer;
     border:none;
